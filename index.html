@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moments Made Beautiful Decor</title>
+<link rel="icon" href="images/logo.jpg">
 <meta name="description" content="Moments Made Beautiful Decor: birthdays, baby showers, theme parties and home décor in Shelby Township, Michigan and across Michigan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +50,9 @@ header{position:sticky;top:0;z-index:50;background:var(--header);backdrop-filter
 .nav{display:flex;justify-content:space-between;align-items:center;height:74px;gap:16px}
 .brand{font-family:'Playfair Display',serif;font-size:17px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
 .brand small{display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:3px;color:var(--gold);margin-top:2px}
+.brand-logo{display:inline-block;line-height:0}
+.brand-logo img{width:56px;height:56px;border-radius:50%;display:block;object-fit:cover}
+.brand-logo.footer-logo img{width:96px;height:96px;margin:0 auto}
 .nav-right{display:flex;align-items:center;gap:28px}
 .nav ul{display:flex;gap:28px;list-style:none;align-items:center}
 .nav ul a{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .3s}
@@ -239,7 +243,7 @@ footer .socials a:hover{opacity:.7}
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top">Moments Made Beautiful<small>Event Décor</small></a>
+    <a class="brand-logo" href="#top"><img src="images/logo.jpg" alt="Moments Made Beautiful Event Décor"></a>
     <div class="nav-right">
       <ul>
         <li><a href="#work">Work</a></li>
@@ -449,7 +453,7 @@ footer .socials a:hover{opacity:.7}
 </main>
 
 <footer>
-  <div class="brand">Moments Made Beautiful<small style="display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:3px;margin-top:4px">Event Décor</small></div>
+  <div class="brand-logo footer-logo"><img src="images/logo.jpg" alt="Moments Made Beautiful Event Décor"></div>
   <p>Shelby Township, Michigan · Serving clients across Michigan</p>
   <div class="socials">
     <a href="https://www.instagram.com/moments_made_beautiful_decor/" target="_blank" rel="noopener">Instagram</a>
