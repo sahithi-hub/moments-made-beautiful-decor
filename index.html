@@ -111,6 +111,7 @@ header{position:sticky;top:0;z-index:50;background:var(--header);backdrop-filter
 
 /* services */
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+a.service{display:block;color:inherit;cursor:pointer}
 .service{background:var(--card);border:1px solid var(--line);padding:44px 30px;text-align:center;transition:transform .45s ease,box-shadow .45s ease,border-color .45s ease}
 .service:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold-soft)}
 .service .num{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--gold-text);letter-spacing:2px;margin-bottom:18px;display:block}
@@ -324,9 +325,9 @@ footer .socials a:hover{opacity:.7}
 <section id="services" style="padding-top:0">
   <div class="wrap">
     <div class="services reveal">
-      <div class="service"><span class="num">01</span><h3>Birthdays</h3><p>Balloon arches, themed tables and dessert set-ups</p></div>
-      <div class="service"><span class="num">02</span><h3>Baby showers</h3><p>Soft, sweet details for welcoming little ones</p></div>
-      <div class="service"><span class="num">03</span><h3>Home &amp; festivals</h3><p>Celebrations at home, from housewarmings to festive styling</p></div>
+      <a class="service" href="#work" data-f="birthday"><span class="num">01</span><h3>Birthdays</h3><p>Balloon arches, themed tables and dessert set-ups</p></a>
+      <a class="service" href="#work" data-f="baby"><span class="num">02</span><h3>Baby showers</h3><p>Soft, sweet details for welcoming little ones</p></a>
+      <a class="service" href="#work" data-f="home"><span class="num">03</span><h3>Home &amp; festivals</h3><p>Celebrations at home, from housewarmings to festive styling</p></a>
     </div>
   </div>
 </section>
@@ -521,6 +522,15 @@ themeBtn.addEventListener('click',function(){
   go(0);
   restart();
 })();
+
+/* service cards open the matching gallery filter */
+document.querySelectorAll('a.service[data-f]').forEach(function(card){
+  card.addEventListener('click',function(){
+    var f=card.getAttribute('data-f');
+    var target=document.querySelector('#filters button[data-f="'+f+'"]');
+    if(target)target.click();
+  });
+});
 
 /* gallery filters */
 var btns=document.querySelectorAll('#filters button');
