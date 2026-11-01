@@ -140,6 +140,7 @@ a.service{display:block;color:inherit;cursor:pointer}
 .about{background:var(--paper)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .about-photo{aspect-ratio:4/5;background:var(--photo);display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-text);position:relative}
+.about-photo img{width:82%;height:auto;display:block}
 .about-photo::before{content:"";position:absolute;inset:16px;border:1px solid var(--gold);opacity:.5;pointer-events:none}
 .about h2{font-size:42px;margin-bottom:22px;line-height:1.18}
 .about p{color:var(--muted);margin-bottom:18px;font-size:16px}
@@ -384,7 +385,7 @@ footer .socials a:hover{opacity:.7}
 
 <section class="about" id="about">
   <div class="wrap about-grid">
-    <div class="about-photo reveal">Your photo</div>
+    <div class="about-photo reveal"><img src="images/logo.jpg" alt="Moments Made Beautiful Event Décor logo"></div>
     <div class="reveal">
       <p class="eyebrow">About us</p>
       <h2>Celebrate in Style with Moments Made Beautiful Event Décor!</h2>
